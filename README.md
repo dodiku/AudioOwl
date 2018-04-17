@@ -12,7 +12,7 @@ The latest stable release is available on PyPI.
 Install it using the following command -
 
 ```bash
-$ pip install audioowl
+$ pip install AudioOwl
 ```
 
 # Usage
@@ -58,7 +58,7 @@ data = audioowl.analyze_file(path='my_music_file.wav', sr=22050)
 ```
 The ``data`` object will include the following properties:
 
-```Python
+```python
 
   data['sample_rate'] # [int] sample rate
 
@@ -80,18 +80,18 @@ The ``data`` object will include the following properties:
 
   data['notes'] # [list] notes across the file, based on chromagram of hop_length=512 samples.
   # notes legend:
-  # 0  c	  261.63
-  # 1  c#	 277.18
-  # 2  d	  293.66
-  # 3  d#	 311.13
-  # 4  e	  329.63
-  # 5  f	  349.23
-  # 6  f#     369.99
-  # 7  g	  392.00
-  # 8  g#	 415.30
-  # 9  a	  440.00
-  # 10 a#	 466.16
-  # 11 b	  493.88
+  # 0   c
+  # 1   c#
+  # 2   d
+  # 3   d#
+  # 4   e
+  # 5   f
+  # 6   f#
+  # 7   g
+  # 8   g#
+  # 9   a
+  # 10  a#
+  # 11  b
 
   data['dominant_note'] # [int] most dominant (frequent) note across the file
 
