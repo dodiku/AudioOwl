@@ -7,7 +7,7 @@ AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [R
 
 ![AudioOwl](Images/AudioOwl.png)
 
-## Installation
+# Installation
 The latest stable release is available on PyPI.  
 Install it using the following command -
 
@@ -15,10 +15,10 @@ Install it using the following command -
 $ pip install audioowl
 ```
 
-## Usage
+# Usage
 Given an audio file, AudioOwl generates an objects with many useful information about your file 💪.
 
-#### audioowl.analyze_file()
+## audioowl.analyze_file()
 The ``audioowl.analyze_file()`` function allows you to use the path to the audio file.
 
 ```python
@@ -32,7 +32,7 @@ Supported keyword arguments for ``audioowl.analyze_file()``:
 - ``path`` - Local path to the audio file.
 - ``sr`` *[optional]* - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis. default = 22050.
 
-#### audioowl.analyze_samples()
+## audioowl.analyze_samples()
 The ``audioowl.analyze_samples()`` function allows you to use an audio time series (as numpy array).
 
 ```python
@@ -49,7 +49,7 @@ Supported keyword arguments for ``audioowl.analyze_samples()``:
 - ``y`` - Time series. Must be a numpy array, with shape (1,) for mono, and (2,) for stereo.
 - ``sr`` - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis.
 
-#### Output data explained
+## Output data explained
 The return value of all function is a an object (dictionary) with the analysis results.
 In case where the return value is stored in ``data``:
 ```python
