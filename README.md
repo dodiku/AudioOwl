@@ -26,7 +26,7 @@ import audioowl
 data = audioowl.analyze_file(path='my_music_file.wav', sr=22050)
 
 print (data)
-==> {'sample_rate': 22050, 'duration': 36.096009070294784, 'beat_samples': [12794, 40148, 66179, 93092, 118681, 146035, 172066, 198979, 231186, 251922, 277512, 304425, 336632, 357368, 383399, 410311, 436342, 449137, 463696, 480020, 489286, 502521, 516198, 532523, 555024, 586349, 595172, 608850, 622085, 647675, 660469, 700618, 714295, 754003], 'number_of_beats': 34, 'tempo_float': 54.853709620475506, 'tempo_int': 54, 'zero_crossing': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0...}
+==> {'sample_rate': 22050, 'duration': 36.096009070294784, 'beat_samples': [12794, 40148, 66179, 93092, ...}
 ```
 Supported keyword arguments for ``audioowl.analyze_file()``:
 - ``path`` - Local path to the audio file.
@@ -43,7 +43,7 @@ y, sr = librosa.load('my_music_file.wav')
 data = audioowl.analyze_samples(y=y, sr=sr)
 
 print (data)
-==> {'sample_rate': 22050, 'duration': 36.096009070294784, 'beat_samples': [12794, 40148, 66179, 93092, 118681, 146035, 172066, 198979, 231186, 251922, 277512, 304425, 336632, 357368, 383399, 410311, 436342, 449137, 463696, 480020, 489286, 502521, 516198, 532523, 555024, 586349, 595172, 608850, 622085, 647675, 660469, 700618, 714295, 754003], 'number_of_beats': 34, 'tempo_float': 54.853709620475506, 'tempo_int': 54, 'zero_crossing': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0...}
+==> {'sample_rate': 22050, 'duration': 36.096009070294784, 'beat_samples': [12794, 40148, 66179, 93092, ...}
 ```
 Supported keyword arguments for ``audioowl.analyze_samples()``:
 - ``y`` - Time series. Must be a numpy array, with shape (1,) for mono, and (2,) for stereo.
