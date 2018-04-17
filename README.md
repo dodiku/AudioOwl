@@ -1,2 +1,2 @@
-# audioanalyzer
-Fast analysis of music files in Python
+# audioanalyzer.py
+A python package for fast analysis of music files 🎸.
