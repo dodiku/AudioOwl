@@ -3,7 +3,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # AudioOwl
-A python package for fast analysis of music files 🎸.
+AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [RNN models](http://madmom.readthedocs.io/en/latest/index.html) to run fast analysis of music files 🎸.
 
 ![AudioOwl](Images/AudioOwl.png)
 
