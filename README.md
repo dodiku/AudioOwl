@@ -8,6 +8,10 @@ AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [R
 ![AudioOwl](Images/AudioOwl.png)
 
 # Installation
+
+> ⚠️ AudioOwl needs **ffmpeg** to be installed on your machine.
+> The easiest way to install ffmpeg (at least on a Mac) is using homebrew. [See instructions here](https://gist.github.com/clayton/6196167).
+
 The latest stable release is available on PyPI.  
 Install it using the following command -
 
