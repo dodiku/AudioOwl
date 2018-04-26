@@ -11,7 +11,7 @@ AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [R
 - [Usage](https://github.com/dodiku/AudioOwl#usage)
 - [Output data explained](https://github.com/dodiku/AudioOwl#output-data-explained)
 
-> Mix your music automatically with [MixingBear]((https://github.com/dodiku/MixingBear) - Automatic beat-mixing of music files 🎚
+> Mix your music automatically with [MixingBear](https://github.com/dodiku/MixingBear) - Automatic beat-mixing of music files 🎚
 
 ![AudioOwl](https://raw.githubusercontent.com/dodiku/AudioOwl/master/Images/AudioOwl.png)
 
