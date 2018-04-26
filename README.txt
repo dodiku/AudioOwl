@@ -1,22 +1,11 @@
+AudioOwl
+========
+AudioOwl is using librosa (https://librosa.github.io/librosa/index.html) and  RNN models (http://madmom.readthedocs.io/en/latest/index.html) to run fast analysis of music files 🎸.
 
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-# AudioOwl
-AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [RNN models](http://madmom.readthedocs.io/en/latest/index.html) to run fast analysis of music files 🎸.
-
-**Jump to:**
-- [Quickstart](https://github.com/dodiku/AudioOwl#quickstart)
-- [Installation](https://github.com/dodiku/AudioOwl#installation)
-- [Usage](https://github.com/dodiku/AudioOwl#usage)
-- [Output data explained](https://github.com/dodiku/AudioOwl#output-data-explained)
-
-
-![AudioOwl](Images/AudioOwl.png)
-
-# Quickstart
+Quickstart
+----------
 Analyze a WAV audio file -
-```python
+::
 import audioowl
 data = audioowl.analyze_file(path='my_music_file.wav', sr=22050)
 
@@ -26,15 +15,15 @@ print (data)
     'beat_samples': [12794, 40148, 66179, 93092, ...,
     'notes': [2,2,2,2,3,3,3,1,1,...]
     ...}
-```
+::
 
 or an MP3 file -
-```python
+::
 data = audioowl.analyze_file(path='my_music_file.mp3', sr=22050)
-```
+::
 
 Get beat times in samples (``data['beat_samples']``) -
-```python
+::
 import matplotlib.pyplot as plt
 
 waveform = audioowl.get_waveform('drums.mp3', sr=22050)
@@ -44,70 +33,81 @@ plt.figure()
 plt.vlines(data['beat_samples'])
 plt.plot(waveform)
 plt.show()
-```
-![plotting beats](images/plot_drums_beats.png)
-
-# Installation
-> Tested on Python 3.6 or later
+::
 
 
-> ⚠️ AudioOwl needs **ffmpeg** to be installed on your machine.
-> The easiest way to install ffmpeg (at least on a Mac) is using homebrew. [See instructions here](https://gist.github.com/clayton/6196167).
+Installation
+--------------
+Tested on Python 3.6 or later
 
-The latest stable release is available on PyPI.  
+
+⚠️ AudioOwl needs **ffmpeg** to be installed on your machine.
+The easiest way to install ffmpeg (at least on a Mac) is using homebrew. See instructions here - (https://gist.github.com/clayton/6196167).
+
+The latest stable release is available on PyPI.
 Install it using the following command -
 
-```bash
+::
 $ pip install audioowl
-```
+::
 
-# Usage
+Usage
+-----
 Given an audio file, AudioOwl generates an objects with many useful information about your file 💪.
 
-## ``audioowl.get_waveform()``
-Returns a numpy array that contains that audio file time series.  
+
+``audioowl.get_waveform()``
+---------------------------
+Returns a numpy array that contains that audio file time series.
 
 Supported keyword arguments for ``audioowl.get_waveform()``:
 - ``path`` - Local path to the audio file.
-- ``sr`` *[optional]* - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis. default = 22050.
+- ``sr`` - optional - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis. default = 22050.
 
-## ``audioowl.analyze_file()``
-Returns an object (dictionary) with the analysis results.  
+
+``audioowl.analyze_file()``
+---------------------------
+Returns an object (dictionary) with the analysis results.
 
 The ``audioowl.analyze_file()`` function allows you to use the path to the audio file.
 
-
 Supported keyword arguments for ``audioowl.analyze_file()``:
 - ``path`` - Local path to the audio file.
-- ``sr`` *[optional]* - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis. default = 22050.
+- ``sr`` - optional - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis. default = 22050.
 
-## ``audioowl.analyze_samples()``
-Returns a numpy array that contains that audio file time series.  
+
+``audioowl.analyze_samples()``
+------------------------------
+Returns a numpy array that contains that audio file time series.
 
 The ``audioowl.analyze_samples()`` function allows you to use an audio time series (as numpy array).
 
 Example -
 
-```python
+::
 import audioowl
 
 time_series = audioowl.get_waveform('my_music_file.wav')
 data = audioowl.analyze_samples(y=time_series, sr=44100)
-```
+::
+
 Supported keyword arguments for ``audioowl.analyze_samples()``:
 - ``y`` - Time series. Must be a numpy array, with shape (1,) for mono, and (2,) for stereo.
 - ``sr`` - Requested sample rate for the analyzed file. This does not have to be the actual sample rate of the file, but the sample rate that will be used for the analysis.
 
-## Output data explained
+Output data explained
+---------------------
 The return value of all function is a an object (dictionary) with the analysis results.
 In case where the return value is stored in ``data``:
-```python
+
+::
 import audioowl
 data = audioowl.analyze_file(path='my_music_file.wav', sr=22050)
-```
+::
+
 The ``data`` object will include the following properties:
 
-```python
+::
 
   data['sample_rate'] # [int] sample rate
 
@@ -144,4 +144,4 @@ The ``data`` object will include the following properties:
 
   data['dominant_note'] # [int] most dominant (frequent) note across the file
 
-```
+::
