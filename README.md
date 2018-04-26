@@ -42,7 +42,7 @@ waveform = audioowl.get_waveform('drums.mp3', sr=22050)
 data = audioowl.analyze_file('drums.mp3', sr=22050)
 
 plt.figure()
-plt.vlines(data['beat_samples'])
+plt.vlines(data['beat_samples'], -1.0, 1.0)
 plt.plot(waveform)
 plt.show()
 ```
