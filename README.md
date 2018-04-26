@@ -12,7 +12,7 @@ AudioOwl is using [librosa](https://librosa.github.io/librosa/index.html) and [R
 - [Output data explained](https://github.com/dodiku/AudioOwl#output-data-explained)
 
 
-![AudioOwl](Images/AudioOwl.png)
+![AudioOwl](https://raw.githubusercontent.com/dodiku/AudioOwl/master/Images/AudioOwl.png)
 
 # Quickstart
 Analyze a WAV audio file -
@@ -45,7 +45,7 @@ plt.vlines(data['beat_samples'])
 plt.plot(waveform)
 plt.show()
 ```
-![plotting beats](images/plot_drums_beats.png)
+![plotting beats](https://raw.githubusercontent.com/dodiku/AudioOwl/master/Images/plot_drums_beats.png)
 
 # Installation
 > Tested on Python 3.6 or later

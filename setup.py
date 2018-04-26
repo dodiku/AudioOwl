@@ -1,13 +1,15 @@
 from setuptools import setup
+import sys, os
 
-def readme():
-    with open('README.txt') as f:
-        return f.read()
+with open('README.md') as f:
+    long_description = f.read()
+
 
 setup(name='audioowl',
-      version='0.0.4',
+      version='0.0.12',
       description='Fast and simple music and audio analysis using RNN in Python',
-      long_description=readme(),
+      long_description=long_description,
+      long_description_content_type="text/markdown",
       classifiers=[
           'Development Status :: 4 - Beta',
           'License :: OSI Approved :: MIT License',
