@@ -1,7 +1,7 @@
 from setuptools import setup
 import sys, os
 
-with open('README.md') as f:
+with open('README.md', encoding='utf8') as f:
     long_description = f.read()
 
 
